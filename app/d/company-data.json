@@ -1,0 +1,410 @@
+[
+  {
+    "name":"Abu Dhabi (UAE)",
+    "countNumber":1297
+  },
+  {
+    "name":"Alabama (US)",
+    "countNumber":213708
+  },
+  {
+    "name":"Alaska (US)",
+    "countNumber":120587
+  },
+  {
+    "name":"Albania",
+    "countNumber":40213
+  },
+  {
+    "name":"Arizona (US)",
+    "countNumber":848620
+  },
+  {
+    "name":"Arkansas (US)",
+    "countNumber":413479
+  },
+  {
+    "name":"Aruba",
+    "countNumber":47159
+  },
+  {
+    "name":"Australia",
+    "countNumber":2275625
+  },
+  {
+    "name":"Bahamas",
+    "countNumber":165550
+  },
+  {
+    "name":"Bahrain",
+    "countNumber":69221
+  },
+  {
+    "name":"Bangladesh",
+    "countNumber":88555
+  },
+  {
+    "name":"Barbados",
+    "countNumber":30129
+  },
+  {
+    "name":"Belgium",
+    "countNumber":943454
+  },
+  {
+    "name":"Bermuda",
+    "countNumber":45568
+  },
+  {
+    "name":"California (US)",
+    "countNumber":3530938
+  },
+  {
+    "name":"Canada",
+    "countNumber":706317
+  },
+  {
+    "name":"Connecticut (US)",
+    "countNumber":656481
+  },
+  {
+    "name":"Croatia",
+    "countNumber":179591
+  },
+  {
+    "name":"Cyprus",
+    "countNumber":346492
+  },
+  {
+    "name":"Denmark",
+    "countNumber":674053
+  },
+  {
+    "name":"District of Columbia (US)",
+    "countNumber":220741
+  },
+  {
+    "name":"Dominican Republic",
+    "countNumber":369991
+  },
+  {
+    "name":"Dubai (UAE)",
+    "countNumber":1552
+  },
+  {
+    "name":"Finland",
+    "countNumber":461934
+  },
+  {
+    "name":"Florida (US)",
+    "countNumber":6572879
+  },
+  {
+    "name":"Georgia (US)",
+    "countNumber":1672958
+  },
+  {
+    "name":"Gibraltar",
+    "countNumber":104852
+  },
+  {
+    "name":"Greenland",
+    "countNumber":8995
+  },
+  {
+    "name":"Hawaii (US)",
+    "countNumber":297531
+  },
+  {
+    "name":"Hong Kong",
+    "countNumber":1883061
+  },
+  {
+    "name":"Iceland",
+    "countNumber":144756
+  },
+  {
+    "name":"Idaho (US)",
+    "countNumber":233544
+  },
+  {
+    "name":"India",
+    "countNumber":1484947
+  },
+  {
+    "name":"Iowa (US)",
+    "countNumber":459434
+  },
+  {
+    "name":"Ireland",
+    "countNumber":553584
+  },
+  {
+    "name":"Isle of Man",
+    "countNumber":146252
+  },
+  {
+    "name":"Jamaica",
+    "countNumber":88047
+  },
+  {
+    "name":"Jersey",
+    "countNumber":115614
+  },
+  {
+    "name":"Kansas (US)",
+    "countNumber":486815
+  },
+  {
+    "name":"Latvia",
+    "countNumber":355317
+  },
+  {
+    "name":"Liechtenstein",
+    "countNumber":132694
+  },
+  {
+    "name":"Louisiana (US)",
+    "countNumber":908802
+  },
+  {
+    "name":"Luxembourg",
+    "countNumber":179876
+  },
+  {
+    "name":"Maine (US)",
+    "countNumber":107404
+  },
+  {
+    "name":"Malta",
+    "countNumber":56683
+  },
+  {
+    "name":"Maryland (US)",
+    "countNumber":1027406
+  },
+  {
+    "name":"Massachusetts (US)",
+    "countNumber":966498
+  },
+  {
+    "name":"Mauritius",
+    "countNumber":133696
+  },
+  {
+    "name":"Mexico",
+    "countNumber":1004690
+  },
+  {
+    "name":"Michigan (US)",
+    "countNumber":1849953
+  },
+  {
+    "name":"Minnesota (US)",
+    "countNumber":245007
+  },
+  {
+    "name":"Mississippi (US)",
+    "countNumber":493167
+  },
+  {
+    "name":"Missouri (US)",
+    "countNumber":1231692
+  },
+  {
+    "name":"Montenegro",
+    "countNumber":69864
+  },
+  {
+    "name":"Myanmar",
+    "countNumber":42064
+  },
+  {
+    "name":"Netherlands",
+    "countNumber":2497253
+  },
+  {
+    "name":"New Brunswick (Canada)",
+    "countNumber":165130
+  },
+  {
+    "name":"New Hampshire (US)",
+    "countNumber":533478
+  },
+  {
+    "name":"New Jersey (US)",
+    "countNumber":1178768
+  },
+  {
+    "name":"New Mexico (US)",
+    "countNumber":343184
+  },
+  {
+    "name":"New York (US)",
+    "countNumber":4365637
+  },
+  {
+    "name":"New Zealand",
+    "countNumber":1154626
+  },
+  {
+    "name":"Newfoundland and Labrador (Ca...",
+    "countNumber":84504
+  },
+  {
+    "name":"North Carolina (US)",
+    "countNumber":1261694
+  },
+  {
+    "name":"Norway",
+    "countNumber":749272
+  },
+  {
+    "name":"Nova Scotia (Canada)",
+    "countNumber":142250
+  },
+  {
+    "name":"Ohio (US)",
+    "countNumber":1666555
+  },
+  {
+    "name":"Oklahoma (US)",
+    "countNumber":466085
+  },
+  {
+    "name":"Oregon (US)",
+    "countNumber":717390
+  },
+  {
+    "name":"Pakistan",
+    "countNumber":71729
+  },
+  {
+    "name":"Panama",
+    "countNumber":831248
+  },
+  {
+    "name":"Pennsylvania (US)",
+    "countNumber":1801222
+  },
+  {
+    "name":"Poland",
+    "countNumber":393491
+  },
+  {
+    "name":"Prince Edward Island (Canada)",
+    "countNumber":28089
+  },
+  {
+    "name":"Puerto Rico",
+    "countNumber":331325
+  },
+  {
+    "name":"Quebec (Canada)",
+    "countNumber":1880852
+  },
+  {
+    "name":"Rhode Island (US)",
+    "countNumber":96118
+  },
+  {
+    "name":"Romania",
+    "countNumber":1411207
+  },
+  {
+    "name":"Rwanda",
+    "countNumber":13152
+  },
+  {
+    "name":"Singapore",
+    "countNumber":902851
+  },
+  {
+    "name":"Slovenia",
+    "countNumber":124104
+  },
+  {
+    "name":"South Africa",
+    "countNumber":1559848
+  },
+  {
+    "name":"South Carolina (US)",
+    "countNumber":717744
+  },
+  {
+    "name":"South Dakota (US)",
+    "countNumber":126307
+  },
+  {
+    "name":"Spain",
+    "countNumber":2643019
+  },
+  {
+    "name":"Sweden",
+    "countNumber":1209914
+  },
+  {
+    "name":"Tajikistan",
+    "countNumber":33338
+  },
+  {
+    "name":"Tanzania",
+    "countNumber":101318
+  },
+  {
+    "name":"Tennessee (US)",
+    "countNumber":687894
+  },
+  {
+    "name":"Thailand",
+    "countNumber":1199710
+  },
+  {
+    "name":"Tonga",
+    "countNumber":1921
+  },
+  {
+    "name":"Tunisia",
+    "countNumber":83316
+  },
+  {
+    "name":"Uganda",
+    "countNumber":183624
+  },
+  {
+    "name":"United Kingdom",
+    "countNumber":8774435
+  },
+  {
+    "name":"Utah (US)",
+    "countNumber":314394
+  },
+  {
+    "name":"Vanuatu",
+    "countNumber":5147
+  },
+  {
+    "name":"Vermont (US)",
+    "countNumber":91979
+  },
+  {
+    "name":"Viet Nam",
+    "countNumber":84211
+  },
+  {
+    "name":"Virginia (US)",
+    "countNumber":793536
+  },
+  {
+    "name":"Washington (US)",
+    "countNumber":949899
+  },
+  {
+    "name":"West Virginia (US)",
+    "countNumber":313915
+  },
+  {
+    "name":"Wyoming (US)",
+    "countNumber":284913
+  }
+]
