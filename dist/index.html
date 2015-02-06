@@ -1,0 +1,149 @@
+<!doctype html> <html class=no-js> <head> <meta charset=utf-8> <meta name=description> <meta name=viewport content="width=device-width, initial-scale=1, minimal-ui"> <title>CompanyVis</title> <!--Place favicon.ico and apple-touch-icon.png in the root directory--> <link rel=stylesheet href=styles/main.css> <script src=scripts/vendor/modernizr.js></script> </head> <body> <!--[if lt IE 10]>
+ <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+ <![endif]--> <!--Google Analytics: change UA-XXXXX-X to be your site's ID.--> <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script> <script src=scripts/vendor.js></script> <script src=scripts/plugins.js></script> <script src=scripts/main.js></script> <script type=text/javascript>
+        var width = 960,
+        height = 720,
+        speed = 1e-2,
+        start = Date.now();
+
+        var sphere = {type: "Sphere"};
+
+        var projection = d3.geo.orthographic()
+            .scale(height / 2.1)
+            .translate([width / 2, height / 2])
+            .clipAngle(90)
+            .precision(.5);
+
+        var graticule = d3.geo.graticule();
+
+        var canvas = d3.select("body").append("canvas")
+            .attr("width", width)
+            .attr("height", height);
+
+        var context = canvas.node().getContext("2d");
+
+        var path = d3.geo.path()
+            .projection(projection)
+            .context(context);
+
+        queue()
+          .defer(d3.json, "/d/world.json")
+          .defer(d3.tsv, "/d/world-country-names.tsv")
+          .defer(d3.json, "/d/us.json")
+          .defer(d3.tsv, "/d/us.tsv")
+          .defer(d3.json, "/d/company-data.json")
+          .await(ready);
+
+        function ready(error, topo, names, us, stateNames, companyData) {
+          var land = topojson.feature(topo, topo.objects.land),
+              countries = topojson.feature(topo, topo.objects.countries).features,
+              states = topojson.feature(us, us.objects.states).features,
+              stateBorders = topojson.mesh(us, us.objects.states, function(a, b) {
+                return a !== b;
+              }),
+              borders = topojson.mesh(topo, topo.objects.countries, function(a, b) {
+                return a !== b;
+              }),
+              grid = graticule();
+              countries = countries.filter(function(d) {
+                return names.some(function(n) {
+                  if (d.id == n.id) return d.name = n.name;
+                })
+              });
+              countries = countries.filter(function(d) {
+                return companyData.some(function(n) {
+                  if (d.name == n.name) return d.count = n.countNumber;
+                })
+              });
+              states = states.filter(function(d) {
+                return stateNames.some(function(n) {
+                  if (d.id == n.id) return d.name = n.name;
+                })
+              });
+              states = states.filter(function(d) {
+                return companyData.some(function(n) {
+                  if (n.name.indexOf("(US)") > -1 && n.name.indexOf(d.name) > -1) return d.count = n.countNumber;
+                })
+              });
+
+            var max = 0;
+
+            countries.forEach(function(i){
+              if (i.count > max){
+                max = i.count;
+              }
+            });
+            states.forEach(function(i){
+              if (i.count > max){
+                max = i.count;
+              }
+            });
+
+          var color = d3.scale.threshold()
+            .domain([max/8, max/6, max/4, max/2, max])
+            .range(["#f2f0f7", "#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]);
+
+          d3.timer(function() {
+            projection.rotate([speed * (Date.now() - start), -15]);
+
+            context.clearRect(0, 0, width, height);
+
+            context.beginPath();
+            path(sphere);
+            context.lineWidth = 1;
+            context.strokeStyle = "#000";
+            context.stroke();
+
+            context.beginPath();
+            path(sphere);
+            context.fillStyle = "#fff";
+            context.fill();
+
+            context.beginPath();
+            path(land);
+            context.strokeStyle = "#000";
+            context.stroke();
+
+            countries.forEach(function(c){
+              context.beginPath();
+              path(c)
+              context.fillStyle = color(c.count);
+              context.fill();
+            })
+
+            states.forEach(function(c){
+              context.beginPath();
+              path(c)
+              context.fillStyle = color(c.count);
+              context.fill();
+            })
+
+            context.beginPath();
+            path(borders);
+            context.lineWidth = .5;
+            context.strokeStyle = "#000";
+            context.stroke();
+
+            context.beginPath();
+            path(stateBorders);
+            context.lineWidth = .3;
+            context.strokeStyle = "#000";
+            context.stroke();
+
+            // context.beginPath();
+            // path(grid);
+            // context.lineWidth = .5;
+            // context.strokeStyle = "rgba(119,119,119,.5)";
+            // context.stroke();
+          });
+        };
+
+        d3.select(self.frameElement).style("height", height + "px");
+        </script> </body> </html> 
