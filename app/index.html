@@ -90,11 +90,11 @@
             .context(context);
 
         queue()
-          .defer(d3.json, "/d/world.json")
-          .defer(d3.tsv, "/d/world-country-names.tsv")
-          .defer(d3.json, "/d/us.json")
-          .defer(d3.tsv, "/d/us.tsv")
-          .defer(d3.json, "/d/company-data.json")
+          .defer(d3.json, "d/world.json")
+          .defer(d3.tsv, "d/world-country-names.tsv")
+          .defer(d3.json, "d/us.json")
+          .defer(d3.tsv, "d/us.tsv")
+          .defer(d3.json, "d/company-data.json")
           .await(ready);
 
         function ready(error, topo, names, us, stateNames, companyData) {
